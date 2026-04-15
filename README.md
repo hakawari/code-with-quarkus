@@ -91,3 +91,34 @@
 <br>
 ## x주차수업내용
 테스트
+
+# quarkus프로젝트시작! (학번:20250583 이름:하성욱 )
+매주수업내용을정리하자.
+## 7주차수업내용
+실습1 : search.js 스크립트 수정
+실습2 : mian.css 파일 생성
+실습3 : 검색 구현
+과제1 : 챔피언 이름 입력후 화면출력
+과제2 : 검색어가 없거나 공백인 경우 메인화면으로 돌아가기
+과제3 :showMainScreen() 함수를 만들고 performSearch에서 q가 없으면 호출
+과제4 : 클릭 →기존 section이 다시 보이게 하기
+<divalign="center">
+<img src="screenshot/7주차.png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (2).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (3).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (4).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (5).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (6).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (7).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (8).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (9).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (10).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (11).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (12).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (13).png" width="45%" alt="실습 화면">
+<img src="screenshot/7주차 (14).png" width="45%" alt="과제 화면">
+<img src="screenshot/7주차 (15).png" width="45%" alt="과제 화면">
+</div>
+<br>
+## x주차수업내용
+테스트
