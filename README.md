@@ -122,3 +122,44 @@
 <br>
 ## x주차수업내용
 테스트
+
+# quarkus프로젝트시작! (학번:20250583 이름:하성욱 )
+매주수업내용을정리하자.
+## 9주차수업내용
+실습1 : 다크모드 라이트모드 설정
+실습2 : 자바소스코드 접근경로 및 리턴 값 등록
+실습3 : MySQL설치
+실습4 : 데이터베이스 연동
+실습5 : 테이블데이터 삽입
+<divalign="center">
+<img src="screenshot/9주차.png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (2).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (3).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (4).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (5).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (6).png" width="45%" alt="실습 화면">
+</div>
+<br>
+## x주차수업내용
+테스트
+
+# quarkus프로젝트시작! (학번:20250583 이름:하성욱 )
+매주수업내용을정리하자.
+## 10주차수업내용
+실습1 : 도매인 패키지 구조
+실습2 : 로그인 엔드 포인트 작성
+실습3 : 로그인 화면 만들기
+실습4 : 로그아웃 설정
+실습5 : 임시 사용자 데이터 삽입
+<divalign="center">
+<img src="screenshot/10주차.png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (2).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (3).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (4).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (5).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (6).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (7).png" width="45%" alt="실습 화면">
+</div>
+<br>
+## x주차수업내용
+테스트
