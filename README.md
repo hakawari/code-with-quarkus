@@ -138,6 +138,10 @@
 <img src="screenshot/9주차 (4).png" width="45%" alt="실습 화면">
 <img src="screenshot/9주차 (5).png" width="45%" alt="실습 화면">
 <img src="screenshot/9주차 (6).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (7).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (8).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (9).png" width="45%" alt="실습 화면">
+<img src="screenshot/9주차 (10).png" width="45%" alt="실습 화면">
 </div>
 <br>
 ## x주차수업내용
