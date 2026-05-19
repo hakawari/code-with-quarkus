@@ -180,7 +180,7 @@ REST API 접근 경로 등록 및 MySQL 데이터베이스 시스템 구축
 <img src="screenshot/11주차 (2).png" width="45%" alt="실습 화면">
 <img src="screenshot/11주차 (3).png" width="45%" alt="실습 화면">
 <img src="screenshot/11주차 (4).png" width="45%" alt="실습 화면">
-<img src="screenshot/11주차 (5).png" width="45%" alt="실습 화면">
+<img src="screenshot/11주차 (5).png" width="45%" alt="과제 화면">
 </div>
 <br>
 ## 11주차수업내용
