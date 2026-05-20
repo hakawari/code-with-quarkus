@@ -79,7 +79,7 @@ public class AuthResource {
         return Response.ok(html).build();
     }
 
-    // 4. [이번 PPT 내용 추가] GET /logout → 로그아웃 처리 및 메인 이동
+    // 4. GET /logout → 로그아웃 처리 및 메인 이동
     @GET
     @Path("/logout")
     public Response logout() {
@@ -100,4 +100,68 @@ public class AuthResource {
                 .seeOther(URI.create("/"))
                 .build();
     }
-} // <- 클래스를 닫는 맨 마지막 중괄호
+
+    // 5. GET /register → 회원가입 페이지 연결
+    @GET
+    @Path("/register")
+    @Produces(MediaType.TEXT_HTML)
+    public Response registerPage() {
+        InputStream html = getClass()
+            .getClassLoader()
+            .getResourceAsStream("META-INF/resources/login/register.html");
+        return Response.ok(html).build();
+    }
+
+    // 6. POST /register_check → 가입 데이터 중복 검증 및 DB 저장 실행
+    @POST
+    @Path("/register_check")
+    @Transactional
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.TEXT_HTML)
+    public Response registerCheck(
+            @FormParam("username") String username,
+            @FormParam("password") String password,
+            @FormParam("email")    String email,
+            @FormParam("phone")    String phone) {
+
+        // ① 아이디 중복 체크
+        if (User.findByUsername(username) != null) {
+            return Response
+                    .seeOther(URI.create("/register?error=duplicate_username"))
+                    .build();
+        }
+
+        // ② 이메일 중복 체크
+        if (User.findByEmail(email) != null) {
+            return Response
+                    .seeOther(URI.create("/register?error=duplicate_email"))
+                    .build();
+        }
+
+        // ③ DB에 신규 유저 정보 삽입
+        User newUser = new User();
+        newUser.username = username;
+        newUser.password = password;
+        newUser.email    = email;
+        newUser.phone    = phone;
+        newUser.persist(); // Hibernate Panache DB 저장
+
+        // ④ 가입 처리 성공 시 완료 페이지로 리다이렉트 이동
+        return Response
+                .seeOther(URI.create("/register_success"))
+                .build();
+    }
+
+    // ✨ 7. GET /register_success → 가입 완료 화면(HTML) 반환 엔드포인트 추가
+    @GET
+    @Path("/register_success")
+    @Produces(MediaType.TEXT_HTML)
+    public Response registerSuccess() {
+        // 아까 맨 아래 'login' 폴더 안에 생성해 둔 register_success.html 파일을 읽어옵니다.
+        InputStream html = getClass()
+                .getClassLoader()
+                .getResourceAsStream("META-INF/resources/login/register_success.html");
+        
+        return Response.ok(html).build();
+    }
+}

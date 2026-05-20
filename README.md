@@ -146,7 +146,7 @@ REST API 접근 경로 등록 및 MySQL 데이터베이스 시스템 구축
 ## 9주차수업내용
 테스트
 
-# 로그인 구현 (학번:20250583 이름:하성욱 )
+# 자바 백엔드 코딩 (학번:20250583 이름:하성욱 )
 벡엔드 도메인 패키지 아키텍처 설계 및 로그인·로그아웃 엔드포인트 작성
 ## 10주차수업내용
 실습1 : 도매인 패키지 구조
@@ -154,6 +154,11 @@ REST API 접근 경로 등록 및 MySQL 데이터베이스 시스템 구축
 실습3 : 로그인 화면 만들기
 실습4 : 로그아웃 설정
 실습5 : 임시 사용자 데이터 삽입
+실습6 : 세션 활성화 설정 추가
+실습7 : DB 사용자 체크
+실습8: 로그인 후 페이지
+실습9 : 로그아웃 엔드포인트
+과제1 : Dark, Light 모드 구현
 <divalign="center">
 <img src="screenshot/10주차.png" width="45%" alt="실습 화면">
 <img src="screenshot/10주차 (2).png" width="45%" alt="실습 화면">
@@ -162,25 +167,40 @@ REST API 접근 경로 등록 및 MySQL 데이터베이스 시스템 구축
 <img src="screenshot/10주차 (5).png" width="45%" alt="실습 화면">
 <img src="screenshot/10주차 (6).png" width="45%" alt="실습 화면">
 <img src="screenshot/10주차 (7).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (8).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (9).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (10).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (11).png" width="45%" alt="실습 화면">
+<img src="screenshot/10주차 (12).png" width="45%" alt="과제 화면">
 </div>
 <br>
 ## 10주차수업내용
 테스트
 
-# 자바 벡엔드 코딩 (학번:20250583 이름:하성욱 )
-세션 기반 회원 인증 시스템 및 네비바 다크·라이트 모드 토글 구현
+# 회원가입 (학번:20250583 이름:하성욱 )
+회원가입 엔드포인트 작성하고 실제 데이터 베이스에 등록
 ## 11주차수업내용
-실습1 : 세션 활성화 설정 추가
-실습2 : DB 사용자 체크
-실습3 : 로그인 후 페이지
-실습4 : 로그아웃 엔드포인트
-과제1 : Dark,Light모드 구현
+실습1 : 회원가입 버튼 추가
+실습2 : register 엔드포인트 등록
+실습3 : 회원가입 화면 작성
+실습4 : 회원 테이블 수정
+실습5 : 입력 값 유효성 검사
+실습6 : SHA-256해시, 모달창
+실습7 : register_check 엔드포인트 등록
+실습8 : register_success 엔드포인트 등록
+실습9 : dev모드에서 가입 확인
+과제1 : 로그인 입력값 체크 및 에러 메시지 처리
 <divalign="center">
 <img src="screenshot/11주차.png" width="45%" alt="실습 화면">
 <img src="screenshot/11주차 (2).png" width="45%" alt="실습 화면">
 <img src="screenshot/11주차 (3).png" width="45%" alt="실습 화면">
 <img src="screenshot/11주차 (4).png" width="45%" alt="실습 화면">
-<img src="screenshot/11주차 (5).png" width="45%" alt="과제 화면">
+<img src="screenshot/11주차 (5).png" width="45%" alt="실습 화면">
+<img src="screenshot/11주차 (6).png" width="45%" alt="실습 화면">
+<img src="screenshot/11주차 (7).png" width="45%" alt="과제 화면">
+<img src="screenshot/11주차 (8).png" width="45%" alt="과제 화면">
+<img src="screenshot/11주차 (9).png" width="45%" alt="과제 화면">
+<img src="screenshot/11주차 (10).png" width="45%" alt="과제 화면">
 </div>
 <br>
 ## 11주차수업내용
