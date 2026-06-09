@@ -67,3 +67,12 @@ function submitLogin() {
     // login.html의 Form 태그를 찾아 자동으로 백엔드 전송
     document.getElementById('loginForm').submit();
 }
+
+// login.js 하단에추가
+window.addEventListener('load', function() {
+const params = new URLSearchParams(window.location.search);
+const error  = params.get('error');
+if (error === '1') {
+showError(document.getElementById('passwordInput'), 'passwordMsg', '아이디 또는 패스워드가 올바르지 않습니다.');
+}
+});

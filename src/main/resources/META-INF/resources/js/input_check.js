@@ -1,3 +1,4 @@
+// 1. 유효성 검사 및 Bootstrap 모달 띄우기
 function validateAndShowModal() {
     let valid = true;
 
@@ -16,7 +17,7 @@ function validateAndShowModal() {
         clearError('username');
     }
 
-    // ② 패스워드 : 8자 이상, 영문+숫자+특수문자
+    // ② 패스워드 : 8자 이상, 영문+숫+특
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
     if (!passwordRegex.test(password)) {
         showError('password', '8자 이상, 영문+숫자+특수문자를 포함 필요.');
@@ -51,13 +52,33 @@ function validateAndShowModal() {
         clearError('phone');
     }
 
-    // 전체 통과 시 확인 모달 출력 (교수님 PPT 요청 변경 내용)
+    // ✨ [구현 완료] 모든 검증 통과 시 모달창에 텍스트 주입 후 모달 오픈
     if (valid) {
-        showConfirmModal();
+        document.getElementById('confirmUsername').textContent = username;
+        document.getElementById('confirmEmail').textContent = email;
+        document.getElementById('confirmPhone').textContent = phone;
+
+        // Bootstrap 모달 객체 생성 후 띄우기
+        const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+        confirmModal.show();
     }
 }
 
-// PPT 구현 사항: 에러 표시 기능
+// ✨ [구현 완료] 모달에서 '가입하기' 버튼을 눌렀을 때 실행되는 최종 전송 함수
+function submitRegister() {
+    const rawPassword = document.getElementById('password').value;
+    
+    // input_sha256.js의 라이브러리 함수를 사용해 비밀번호 암호화(소문자화)
+    const hashedPassword = hex_sha256(rawPassword).toLowerCase();
+    
+    // hidden 타입 input 태그에 해시값 세팅
+    document.getElementById('hashedPassword').value = hashedPassword;
+    
+    // 폼 서브밋 실행 (서버의 POST /register_check로 데이터 전송)
+    document.getElementById('registerForm').submit();
+}
+
+// 에러 표시 기능
 function showError(fieldId, message) {
     const field = document.getElementById(fieldId);
     if (field) {
@@ -66,11 +87,11 @@ function showError(fieldId, message) {
     const msg = document.getElementById(fieldId + 'Msg');
     if (msg) {
         msg.textContent = message;
-        msg.style.display = 'block'; // 화면에 표시
+        msg.style.display = 'block'; 
     }
 }
 
-// PPT 구현 사항: 에러 제거 기능
+// 에러 제거 기능
 function clearError(fieldId) {
     const field = document.getElementById(fieldId);
     if (field) {
@@ -79,12 +100,12 @@ function clearError(fieldId) {
     const msg = document.getElementById(fieldId + 'Msg');
     if (msg) {
         msg.textContent = '';
-        msg.style.display = 'none'; // 화면에서 숨김
+        msg.style.display = 'none'; 
     }
 }
 
-// 주소창의 error 파라미터를 분석해 중복 검사 에러를 띄워주는 함수
-window.onload = function() {
+// ✨ [이름 변경 연동] 주소창 파라미터 분석을 통한 DB 중복 예외 처리 함수
+function checkDuplicateErrors() {
     const params = new URLSearchParams(window.location.search);
     const error = params.get('error');
 
@@ -93,10 +114,4 @@ window.onload = function() {
     } else if (error === 'duplicate_email') {
         showError('email', '이미 사용 중인 이메일입니다.');
     }
-}
-
-// 임시 모달 창 트리거 함수 (다음 PPT에서 모달 HTML 코드가 추가될 예정입니다)
-function showConfirmModal() {
-    console.log("모달 표시 호출됨");
-    alert("회원가입 확인 모달을 띄웁니다! (다음 단계에서 HTML 모달 코드가 추가될 예정입니다)");
 }

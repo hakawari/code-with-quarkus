@@ -13,7 +13,7 @@
 
     <script>
         window.onload = function() {
-            alert("로그인 페이지 로딩 완료");
+            showToast('메인페이지로딩완료');
         }
     </script>
 
@@ -68,8 +68,10 @@
                 
                 <div class="mb-3 text-start">
                     <label class="form-label">패스워드</label>
-                    <input type="password" class="form-control" id="passwordInput" name="password" placeholder="패스워드입력" required>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="패스워드입력" required>
                     <div class="invalid-feedback" id="passwordMsg"></div>
+                    
+                    <input type="hidden" id="password" name="password">
                 </div>
                 
                 <button type="button" class="btn btn-primary w-100" onclick="validateAndLogin()">로그인</button>
@@ -83,6 +85,7 @@
     </section>
 
     <script src="../js/search.js"></script>
+    
     <script src="../js/login.js"></script>
     
 </body>

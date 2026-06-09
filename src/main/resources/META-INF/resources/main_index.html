@@ -13,7 +13,7 @@
 
     <script>
 window.onload = function() {
-alert("메인 페이지 로딩 완료");
+showToast('메인페이지로딩완료');
 }
 
 </script>
@@ -94,7 +94,7 @@ DARK
         <div class="container">
             <h1 class="display-3 fw-bold">League of Legends</h1>
             <p class="lead">적의 넥서스를 파괴하세요! 5v5 MOBA 전투에서 팀과 함께 승리하세요.</p>
-            <a href="#" class="btn btn-primary btn-lg" onclick="alert('즐거운플레이되세요')">무료플레이</a>
+            <a href="#" class="btn btn-primary btn-lg" onclick="showToast('즐거운플레이되세요')">무료플레이</a>
         </div>
     </section>
 
@@ -627,5 +627,21 @@ allowfullscreen>
 
     <script src="js/search.js"></script>
     
+<!--토스트컨테이너</body> 바로위에추가-->
+<div class="toast-container position-fixed
+bottom-0 end-0 p-3" style="z-index:9999">
+<div id="liveToast" class="toast align-items-center
+text-white bg-success border-0" role="alert">
+<div class="d-flex">
+<div class="toast-body" id="toastBody">
+메시지
+</div>
+<button type="button"
+class="btn-close btn-close-white me-2 m-auto"
+data-bs-dismiss="toast"></button>
+</div>
+</div>
+</div>
+
 </body>
 </html>
